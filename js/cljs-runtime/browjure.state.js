@@ -8,12 +8,12 @@ var dataset = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(bro
 var controls = cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(browjure.state.registry),cljs.core.conj.cljs$core$IFn$_invoke$arity$2(ident,new cljs.core.Keyword("dataset","controls","dataset/controls",-1981558636)));
 var keyz = cljs.core.keys(controls);
 var valz = cljs.core.map.cljs$core$IFn$_invoke$arity$2(new cljs.core.Keyword(null,"subject","subject",-1411880451),cljs.core.vals(controls));
-var deps = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__81995){
-var vec__82003 = p__81995;
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82003,(0),null);
-var vec__82006 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82003,(1),null);
-var dataset__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82006,(0),null);
-var attribute = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82006,(1),null);
+var deps = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__94882){
+var vec__94883 = p__94882;
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__94883,(0),null);
+var vec__94886 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__94883,(1),null);
+var dataset__$1 = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__94886,(0),null);
+var attribute = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__94886,(1),null);
 var dep_path = cljs.core.concat.cljs$core$IFn$_invoke$arity$variadic(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("dataset","id","dataset/id",1129473468),dataset__$1], null),(cljs.core.truth_(attribute)?new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("dataset","controls","dataset/controls",-1981558636),attribute], null):null),cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"subject","subject",-1411880451)], null)], 0));
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [k,cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(browjure.state.registry),dep_path)], null);
 }),new cljs.core.Keyword("dataset","dependencies","dataset/dependencies",2019679717).cljs$core$IFn$_invoke$arity$1(dataset)));
@@ -37,9 +37,9 @@ return cljs.core.get_in.cljs$core$IFn$_invoke$arity$2(cljs.core.deref(browjure.s
 });
 browjure.state.use_path_sub = (function browjure$state$use_path_sub(path,init_value){
 var subject = browjure.state.get_or_create_subject(path,init_value);
-var vec__82176 = module$node_modules$react$index.useState(init_value);
-var state = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82176,(0),null);
-var set_state = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82176,(1),null);
+var vec__94905 = module$node_modules$react$index.useState(init_value);
+var state = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__94905,(0),null);
+var set_state = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__94905,(1),null);
 module$node_modules$react$index.useEffect((function (){
 subject.subscribe(set_state);
 
@@ -53,18 +53,18 @@ return state;
 browjure.state.set_path_value = (function browjure$state$set_path_value(path,value){
 return browjure.state.get_or_create_subject(path,value).next(value);
 });
-browjure.state.use_combined_sub = (function browjure$state$use_combined_sub(p__82192){
-var map__82193 = p__82192;
-var map__82193__$1 = (((((!((map__82193 == null))))?(((((map__82193.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__82193.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__82193):map__82193);
-var deps = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82193__$1,new cljs.core.Keyword(null,"deps","deps",1883360319));
-var reduce_fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82193__$1,new cljs.core.Keyword(null,"reduce-fn","reduce-fn",1170414925));
-var init_value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82193__$1,new cljs.core.Keyword(null,"init-value","init-value",-374892331));
-var path = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__82193__$1,new cljs.core.Keyword(null,"path","path",-188191168));
+browjure.state.use_combined_sub = (function browjure$state$use_combined_sub(p__94920){
+var map__94921 = p__94920;
+var map__94921__$1 = (((((!((map__94921 == null))))?(((((map__94921.cljs$lang$protocol_mask$partition0$ & (64))) || ((cljs.core.PROTOCOL_SENTINEL === map__94921.cljs$core$ISeq$))))?true:false):false))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__94921):map__94921);
+var deps = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__94921__$1,new cljs.core.Keyword(null,"deps","deps",1883360319));
+var reduce_fn = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__94921__$1,new cljs.core.Keyword(null,"reduce-fn","reduce-fn",1170414925));
+var init_value = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__94921__$1,new cljs.core.Keyword(null,"init-value","init-value",-374892331));
+var path = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__94921__$1,new cljs.core.Keyword(null,"path","path",-188191168));
 var value = browjure.state.use_path_sub(path,init_value);
-var dep_subjects = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__82263){
-var vec__82264 = p__82263;
-var dep_name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82264,(0),null);
-var dep_path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__82264,(1),null);
+var dep_subjects = cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p__94927){
+var vec__94929 = p__94927;
+var dep_name = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__94929,(0),null);
+var dep_path = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__94929,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [dep_name,browjure.state.get_or_create_subject(dep_path,null)], null);
 }),deps));
 var latest_combinations = module$node_modules$rxjs$dist$cjs$index.combineLatest(cljs.core.to_array(cljs.core.vals(dep_subjects))).pipe(module$node_modules$rxjs$dist$cjs$operators$index.map((function (new_vals){

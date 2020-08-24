@@ -32,15 +32,15 @@ this.reader_opts = reader_opts;
 (taoensso.sente.packers.transit.TransitPacker.prototype.taoensso$sente$interfaces$IPacker$pack$arity$2 = (function (_,x){
 var self__ = this;
 var ___$1 = this;
-var fexpr__79908 = taoensso.sente.packers.transit.get_transit_writer_fn(self__.transit_fmt,self__.writer_opts);
-return (fexpr__79908.cljs$core$IFn$_invoke$arity$1 ? fexpr__79908.cljs$core$IFn$_invoke$arity$1(x) : fexpr__79908.call(null,x));
+var fexpr__102273 = taoensso.sente.packers.transit.get_transit_writer_fn(self__.transit_fmt,self__.writer_opts);
+return (fexpr__102273.cljs$core$IFn$_invoke$arity$1 ? fexpr__102273.cljs$core$IFn$_invoke$arity$1(x) : fexpr__102273.call(null,x));
 }));
 
 (taoensso.sente.packers.transit.TransitPacker.prototype.taoensso$sente$interfaces$IPacker$unpack$arity$2 = (function (_,s){
 var self__ = this;
 var ___$1 = this;
-var fexpr__79910 = taoensso.sente.packers.transit.get_transit_reader_fn(self__.transit_fmt,self__.reader_opts);
-return (fexpr__79910.cljs$core$IFn$_invoke$arity$1 ? fexpr__79910.cljs$core$IFn$_invoke$arity$1(s) : fexpr__79910.call(null,s));
+var fexpr__102278 = taoensso.sente.packers.transit.get_transit_reader_fn(self__.transit_fmt,self__.reader_opts);
+return (fexpr__102278.cljs$core$IFn$_invoke$arity$1 ? fexpr__102278.cljs$core$IFn$_invoke$arity$1(s) : fexpr__102278.call(null,s));
 }));
 
 (taoensso.sente.packers.transit.TransitPacker.getBasis = (function (){
@@ -66,8 +66,8 @@ return (new taoensso.sente.packers.transit.TransitPacker(transit_fmt,writer_opts
  * Returns a new TransitPacker
  */
 taoensso.sente.packers.transit.get_transit_packer = (function taoensso$sente$packers$transit$get_transit_packer(var_args){
-var G__79912 = arguments.length;
-switch (G__79912) {
+var G__102281 = arguments.length;
+switch (G__102281) {
 case 0:
 return taoensso.sente.packers.transit.get_transit_packer.cljs$core$IFn$_invoke$arity$0();
 
@@ -95,26 +95,26 @@ return taoensso.sente.packers.transit.get_transit_packer.cljs$core$IFn$_invoke$a
 }));
 
 (taoensso.sente.packers.transit.get_transit_packer.cljs$core$IFn$_invoke$arity$3 = (function (transit_fmt,writer_opts,reader_opts){
-var e_79935 = (function (){try{if((function (x){
-return cljs.core.contains_QMARK_((function (){var G__79920 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"json","json",1279968570),null], null), null);
-return (taoensso.truss.impl.set_STAR_.cljs$core$IFn$_invoke$arity$1 ? taoensso.truss.impl.set_STAR_.cljs$core$IFn$_invoke$arity$1(G__79920) : taoensso.truss.impl.set_STAR_.call(null,G__79920));
+var e_102292 = (function (){try{if((function (x){
+return cljs.core.contains_QMARK_((function (){var G__102285 = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"json","json",1279968570),null], null), null);
+return (taoensso.truss.impl.set_STAR_.cljs$core$IFn$_invoke$arity$1 ? taoensso.truss.impl.set_STAR_.cljs$core$IFn$_invoke$arity$1(G__102285) : taoensso.truss.impl.set_STAR_.call(null,G__102285));
 })(),x);
 })(transit_fmt)){
 return null;
 } else {
 return taoensso.truss.impl._dummy_error;
 }
-}catch (e79919){if((e79919 instanceof Error)){
-var e_79935 = e79919;
-return e_79935;
+}catch (e102284){if((e102284 instanceof Error)){
+var e_102292 = e102284;
+return e_102292;
 } else {
-throw e79919;
+throw e102284;
 
 }
 }})();
-if((e_79935 == null)){
+if((e_102292 == null)){
 } else {
-taoensso.truss.impl._invar_violation_BANG_(true,"taoensso.sente.packers.transit",102,"([:el #{:json}] transit-fmt)",transit_fmt,e_79935,null);
+taoensso.truss.impl._invar_violation_BANG_(true,"taoensso.sente.packers.transit",102,"([:el #{:json}] transit-fmt)",transit_fmt,e_102292,null);
 }
 
 new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(function (){var e = (function (){try{if(cljs.core.map_QMARK_(writer_opts)){
@@ -122,11 +122,11 @@ return null;
 } else {
 return taoensso.truss.impl._dummy_error;
 }
-}catch (e79921){if((e79921 instanceof Error)){
-var e = e79921;
+}catch (e102286){if((e102286 instanceof Error)){
+var e = e102286;
 return e;
 } else {
-throw e79921;
+throw e102286;
 
 }
 }})();
@@ -140,11 +140,11 @@ return null;
 } else {
 return taoensso.truss.impl._dummy_error;
 }
-}catch (e79922){if((e79922 instanceof Error)){
-var e = e79922;
+}catch (e102287){if((e102287 instanceof Error)){
+var e = e102287;
 return e;
 } else {
-throw e79922;
+throw e102287;
 
 }
 }})();

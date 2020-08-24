@@ -3,25 +3,25 @@ var module$node_modules$react$index=shadow.js.require("module$node_modules$react
 var module$node_modules$$material_ui$core$index=shadow.js.require("module$node_modules$$material_ui$core$index", {});
 clj_material_ui.core.component_factory = (function clj_material_ui$core$component_factory(component){
 return (function() { 
-var G__79913__delegate = function (props,children){
+var G__102358__delegate = function (props,children){
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$4(module$node_modules$react$index.createElement,component,cljs.core.clj__GT_js(props),children);
 };
-var G__79913 = function (props,var_args){
+var G__102358 = function (props,var_args){
 var children = null;
 if (arguments.length > 1) {
-var G__79914__i = 0, G__79914__a = new Array(arguments.length -  1);
-while (G__79914__i < G__79914__a.length) {G__79914__a[G__79914__i] = arguments[G__79914__i + 1]; ++G__79914__i;}
-  children = new cljs.core.IndexedSeq(G__79914__a,0,null);
+var G__102359__i = 0, G__102359__a = new Array(arguments.length -  1);
+while (G__102359__i < G__102359__a.length) {G__102359__a[G__102359__i] = arguments[G__102359__i + 1]; ++G__102359__i;}
+  children = new cljs.core.IndexedSeq(G__102359__a,0,null);
 } 
-return G__79913__delegate.call(this,props,children);};
-G__79913.cljs$lang$maxFixedArity = 1;
-G__79913.cljs$lang$applyTo = (function (arglist__79916){
-var props = cljs.core.first(arglist__79916);
-var children = cljs.core.rest(arglist__79916);
-return G__79913__delegate(props,children);
+return G__102358__delegate.call(this,props,children);};
+G__102358.cljs$lang$maxFixedArity = 1;
+G__102358.cljs$lang$applyTo = (function (arglist__102360){
+var props = cljs.core.first(arglist__102360);
+var children = cljs.core.rest(arglist__102360);
+return G__102358__delegate(props,children);
 });
-G__79913.cljs$core$IFn$_invoke$arity$variadic = G__79913__delegate;
-return G__79913;
+G__102358.cljs$core$IFn$_invoke$arity$variadic = G__102358__delegate;
+return G__102358;
 })()
 ;
 });

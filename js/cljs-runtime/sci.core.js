@@ -1,10 +1,10 @@
 goog.provide('sci.core');
 /**
- * Alpha! Returns a new sci var. API subject to change.
+ * Returns a new sci var.
  */
 sci.core.new_var = (function sci$core$new_var(var_args){
-var G__81633 = arguments.length;
-switch (G__81633) {
+var G__104653 = arguments.length;
+switch (G__104653) {
 case 1:
 return sci.core.new_var.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -24,14 +24,14 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 (sci.core.new_var.cljs$core$IFn$_invoke$arity$1 = (function (name){
-var G__81634 = sci.core.new_var.cljs$core$IFn$_invoke$arity$3(name,null,null);
-sci.impl.vars.unbind(G__81634);
+var G__104658 = sci.core.new_var.cljs$core$IFn$_invoke$arity$3(name,null,null);
+sci.impl.vars.unbind(G__104658);
 
-return G__81634;
+return G__104658;
 }));
 
-(sci.core.new_var.cljs$core$IFn$_invoke$arity$2 = (function (name,val){
-return sci.core.new_var.cljs$core$IFn$_invoke$arity$3(name,val,cljs.core.meta(name));
+(sci.core.new_var.cljs$core$IFn$_invoke$arity$2 = (function (name,init_val){
+return sci.core.new_var.cljs$core$IFn$_invoke$arity$3(name,init_val,cljs.core.meta(name));
 }));
 
 (sci.core.new_var.cljs$core$IFn$_invoke$arity$3 = (function (name,init_val,meta){
@@ -41,12 +41,11 @@ return (new sci.impl.vars.SciVar(init_val,name,meta));
 (sci.core.new_var.cljs$lang$maxFixedArity = 3);
 
 /**
- * Alpha! Same as new-var but adds :dynamic true to meta. API subject to
- *   change.
+ * Same as new-var but adds :dynamic true to meta.
  */
 sci.core.new_dynamic_var = (function sci$core$new_dynamic_var(var_args){
-var G__81636 = arguments.length;
-switch (G__81636) {
+var G__104663 = arguments.length;
+switch (G__104663) {
 case 1:
 return sci.core.new_dynamic_var.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -66,10 +65,10 @@ throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(
 });
 
 (sci.core.new_dynamic_var.cljs$core$IFn$_invoke$arity$1 = (function (name){
-var G__81638 = sci.core.new_dynamic_var.cljs$core$IFn$_invoke$arity$3(name,null,null);
-sci.impl.vars.unbind(G__81638);
+var G__104664 = sci.core.new_dynamic_var.cljs$core$IFn$_invoke$arity$3(name,null,null);
+sci.impl.vars.unbind(G__104664);
 
-return G__81638;
+return G__104664;
 }));
 
 (sci.core.new_dynamic_var.cljs$core$IFn$_invoke$arity$2 = (function (name,init_val){
@@ -81,6 +80,37 @@ return (new sci.impl.vars.SciVar(init_val,name,cljs.core.assoc.cljs$core$IFn$_in
 }));
 
 (sci.core.new_dynamic_var.cljs$lang$maxFixedArity = 3);
+
+/**
+ * Same as new-var but adds :macro true to meta as well
+ *   as :sci/macro true to meta of the fn itself.
+ */
+sci.core.new_macro_var = (function sci$core$new_macro_var(var_args){
+var G__104666 = arguments.length;
+switch (G__104666) {
+case 2:
+return sci.core.new_macro_var.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
+
+break;
+case 3:
+return sci.core.new_macro_var.cljs$core$IFn$_invoke$arity$3((arguments[(0)]),(arguments[(1)]),(arguments[(2)]));
+
+break;
+default:
+throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(arguments.length)].join('')));
+
+}
+});
+
+(sci.core.new_macro_var.cljs$core$IFn$_invoke$arity$2 = (function (name,init_val){
+return sci.core.new_macro_var.cljs$core$IFn$_invoke$arity$3(name,init_val,cljs.core.meta(name));
+}));
+
+(sci.core.new_macro_var.cljs$core$IFn$_invoke$arity$3 = (function (name,init_val,meta){
+return (new sci.impl.vars.SciVar(cljs.core.vary_meta.cljs$core$IFn$_invoke$arity$4(init_val,cljs.core.assoc,new cljs.core.Keyword("sci","macro","sci/macro",-868536151),true),name,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(meta,new cljs.core.Keyword(null,"macro","macro",-867863404),true)));
+}));
+
+(sci.core.new_macro_var.cljs$lang$maxFixedArity = 3);
 
 /**
  * Sci var that represents sci's `clojure.core/*in*`
@@ -95,6 +125,14 @@ sci.core.out = sci.impl.io.out;
  */
 sci.core.err = sci.impl.io.err;
 /**
+ * Sci var that represents sci's `clojure.core/*ns*`
+ */
+sci.core.ns = sci.impl.vars.current_ns;
+/**
+ * Sci var that represents sci's `clojure.core/*file*`
+ */
+sci.core.file = sci.impl.vars.current_file;
+/**
  * Sci var that represents sci's `clojure.core/*print-length*`
  */
 sci.core.print_length = sci.impl.io.print_length;
@@ -104,14 +142,14 @@ sci.core.print_length = sci.impl.io.print_length;
  */
 sci.core.alter_var_root = (function sci$core$alter_var_root(var_args){
 var args__4742__auto__ = [];
-var len__4736__auto___81686 = arguments.length;
-var i__4737__auto___81687 = (0);
+var len__4736__auto___104729 = arguments.length;
+var i__4737__auto___104730 = (0);
 while(true){
-if((i__4737__auto___81687 < len__4736__auto___81686)){
-args__4742__auto__.push((arguments[i__4737__auto___81687]));
+if((i__4737__auto___104730 < len__4736__auto___104729)){
+args__4742__auto__.push((arguments[i__4737__auto___104730]));
 
-var G__81688 = (i__4737__auto___81687 + (1));
-i__4737__auto___81687 = G__81688;
+var G__104734 = (i__4737__auto___104730 + (1));
+i__4737__auto___104730 = G__104734;
 continue;
 } else {
 }
@@ -129,13 +167,13 @@ return cljs.core.apply.cljs$core$IFn$_invoke$arity$4(sci.impl.vars.alter_var_roo
 (sci.core.alter_var_root.cljs$lang$maxFixedArity = (2));
 
 /** @this {Function} */
-(sci.core.alter_var_root.cljs$lang$applyTo = (function (seq81668){
-var G__81669 = cljs.core.first(seq81668);
-var seq81668__$1 = cljs.core.next(seq81668);
-var G__81670 = cljs.core.first(seq81668__$1);
-var seq81668__$2 = cljs.core.next(seq81668__$1);
+(sci.core.alter_var_root.cljs$lang$applyTo = (function (seq104682){
+var G__104683 = cljs.core.first(seq104682);
+var seq104682__$1 = cljs.core.next(seq104682);
+var G__104684 = cljs.core.first(seq104682__$1);
+var seq104682__$2 = cljs.core.next(seq104682__$1);
 var self__4723__auto__ = this;
-return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__81669,G__81670,seq81668__$2);
+return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__104683,G__104684,seq104682__$2);
 }));
 
 /**
@@ -175,8 +213,8 @@ return self__4723__auto__.cljs$core$IFn$_invoke$arity$variadic(G__81669,G__81670
  *   
  */
 sci.core.eval_string = (function sci$core$eval_string(var_args){
-var G__81678 = arguments.length;
-switch (G__81678) {
+var G__104693 = arguments.length;
+switch (G__104693) {
 case 1:
 return sci.core.eval_string.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
 
@@ -200,6 +238,62 @@ return sci.impl.interpreter.eval_string.cljs$core$IFn$_invoke$arity$2(s,opts);
 }));
 
 (sci.core.eval_string.cljs$lang$maxFixedArity = 2);
+
+/**
+ * Creates an initial sci context from given options `opts`. The context
+ *   can be used with `eval-string*`. See `eval-string` for available
+ *   options. The internal organization of the context is implementation
+ *   detail and may change in the future.
+ */
+sci.core.init = (function sci$core$init(opts){
+return sci.impl.opts.init(opts);
+});
+/**
+ * Forks a context (as produced with `init`) into a new context. Any new
+ *   vars created in the new context won't be visible in the original
+ *   context.
+ */
+sci.core.fork = (function sci$core$fork(ctx){
+return cljs.core.update.cljs$core$IFn$_invoke$arity$3(ctx,new cljs.core.Keyword(null,"env","env",-1815813235),(function (env){
+return cljs.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.deref(env));
+}));
+});
+/**
+ * Evaluates string `s` in the context of `ctx` (as produced with
+ *   `init`).
+ */
+sci.core.eval_string_STAR_ = (function sci$core$eval_string_STAR_(ctx,s){
+return sci.impl.interpreter.eval_string_STAR_(ctx,s);
+});
+/**
+ * Creates namespace object. Can be used in var metadata.
+ */
+sci.core.create_ns = (function sci$core$create_ns(var_args){
+var G__104701 = arguments.length;
+switch (G__104701) {
+case 1:
+return sci.core.create_ns.cljs$core$IFn$_invoke$arity$1((arguments[(0)]));
+
+break;
+case 2:
+return sci.core.create_ns.cljs$core$IFn$_invoke$arity$2((arguments[(0)]),(arguments[(1)]));
+
+break;
+default:
+throw (new Error(["Invalid arity: ",cljs.core.str.cljs$core$IFn$_invoke$arity$1(arguments.length)].join('')));
+
+}
+});
+
+(sci.core.create_ns.cljs$core$IFn$_invoke$arity$1 = (function (sym){
+return sci.core.create_ns.cljs$core$IFn$_invoke$arity$2(sym,null);
+}));
+
+(sci.core.create_ns.cljs$core$IFn$_invoke$arity$2 = (function (sym,meta){
+return sci.impl.vars.__GT_SciNamespace(sym,meta);
+}));
+
+(sci.core.create_ns.cljs$lang$maxFixedArity = 2);
 
 
 //# sourceMappingURL=sci.core.js.map
