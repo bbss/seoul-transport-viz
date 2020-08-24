@@ -17,6 +17,7 @@ SHADOW_ENV.setLoaded("module$node_modules$$math_DOT_gl$web_mercator$dist$es5$ind
 SHADOW_ENV.setLoaded("module$node_modules$viewport_mercator_project$index.js");
 SHADOW_ENV.setLoaded("module$node_modules$react_virtualized_auto_sizer$dist$index_cjs.js");
 SHADOW_ENV.setLoaded("module$node_modules$react_map_gl$dist$es5$utils$globals.js");
+SHADOW_ENV.setLoaded("module$node_modules$process$browser.js");
 SHADOW_ENV.setLoaded("module$node_modules$react_map_gl$dist$es5$mapbox$mapbox.js");
 SHADOW_ENV.setLoaded("module$node_modules$mapbox_gl$dist$mapbox_gl.js");
 SHADOW_ENV.setLoaded("module$node_modules$react_map_gl$dist$es5$utils$mapboxgl_browser.js");
@@ -714,6 +715,7 @@ SHADOW_ENV.setLoaded("module$node_modules$$mapbox$vector_tile$lib$vectortilefeat
 SHADOW_ENV.setLoaded("module$node_modules$$mapbox$vector_tile$lib$vectortilelayer.js");
 SHADOW_ENV.setLoaded("module$node_modules$$mapbox$vector_tile$lib$vectortile.js");
 SHADOW_ENV.setLoaded("module$node_modules$$mapbox$vector_tile$index.js");
+SHADOW_ENV.setLoaded("module$node_modules$ieee754$index.js");
 SHADOW_ENV.setLoaded("module$node_modules$pbf$index.js");
 SHADOW_ENV.setLoaded("module$node_modules$$loaders_DOT_gl$mvt$dist$es5$lib$transform_to_local_range.js");
 SHADOW_ENV.setLoaded("module$node_modules$$loaders_DOT_gl$mvt$dist$es5$lib$parse_mvt.js");
